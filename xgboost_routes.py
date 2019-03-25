@@ -9,7 +9,7 @@ from datetime import timedelta
 
 from utils import onehotCategorical
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder='templates')
 
 @app.route("/")
 @app.route("/index")
