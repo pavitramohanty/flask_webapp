@@ -52,7 +52,7 @@
     <script type="text/javascript">
       function validateForm() {
         var x = document.forms['predictForm']['store'].value;
-        if (x == 291 || x == 622 || x == 879 || x < 1 || x > 1115) {
+        if (x > 1115) {
           alert("Please input integers between 1 - 1115.")
           return false;
         }
