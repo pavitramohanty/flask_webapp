@@ -62,7 +62,7 @@ def make_prediction():
         prediction = model.predict(xgb.DMatrix(df))
         prediction=np.expm1(prediction)
         #prediction = model.predict(entered_li.values.reshape(1, -1))
-        label = str(np.squeeze(prediction.round(2)))
+        label = "$"+str(np.squeeze(prediction.round(2)))
         return render_template('index.html', label=label)
 
 if __name__ == '__main__':
