@@ -18,8 +18,9 @@ def index():
 
 @app.route('/predict', methods=['POST'])
 def make_prediction():
+    model = joblib.load('model.pkl')
     if request.method=='POST':
-
+        
         entered_li = []
         
         month = request.form['Month']
@@ -65,7 +66,5 @@ def make_prediction():
         return render_template('index.html', label=label)
 
 if __name__ == '__main__':
-    # load ML model
-    model = joblib.load('model.pkl')
     # start API
     app.run()
