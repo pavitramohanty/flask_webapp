@@ -42,7 +42,6 @@ def make_prediction():
         store_encode = onehotCategorical(store, 1115, store=1)
 
         comp_dist = 5458.1
-        print("Month:",month)
         entered_li.extend(store_encode)
         entered_li.extend(storeType_encode)
         entered_li.extend(assortment_encode)
@@ -63,7 +62,6 @@ def make_prediction():
         prediction=np.expm1(prediction)
         #prediction = model.predict(entered_li.values.reshape(1, -1))
         label = str(np.squeeze(prediction.round(2)))
-
         return render_template('index.html', label=label)
 
 if __name__ == '__main__':
