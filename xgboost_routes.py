@@ -23,7 +23,7 @@ def make_prediction():
         entered_li = []
         
         month = request.form['Month']
-        day = int(request.form['Day'])
+        #day = int(request.form['Day'])
         promo = int(request.form['Promo'])
         #promo2 = int(request.form['Promo2'])
         stateH = int(request.form['StateH'])
